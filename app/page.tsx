@@ -46,8 +46,8 @@ const projects = [
     img: "/projects/1-xaytoam.jpg",
     url: "https://xaytoam.vn/vat-lieu/",
     company: "Bizfly",
-    desc: "Building-materials catalogue with product categories, quote requests and a mobile-first layout.",
-    tags: ["Responsive", "Catalogue", "Figma to code"],
+    desc: "Building-materials marketplace with an Elasticsearch-powered product search: fast full-text search across the catalogue, combined with category filters, quote requests and a mobile-first layout.",
+    tags: ["Elasticsearch", "Search", "Responsive"],
   },
 ];
 
@@ -86,7 +86,7 @@ const experience = [
 
 const skills = [
   { group: "Frontend", items: ["React", "Next.js", "Vue.js", "TypeScript", "JavaScript", "Tailwind CSS", "Zustand", "HTML5 / CSS3"] },
-  { group: "Backend", items: ["Laravel", "PHP", "Python", "MySQL", "Magento 2"] },
+  { group: "Backend", items: ["Laravel", "PHP", "Python", "MySQL", "Elasticsearch", "Magento 2"] },
   { group: "Performance", items: ["PageSpeed", "Core Web Vitals", "Lazy loading"] },
   { group: "Tools", items: ["Git", "Figma", "Photoshop", "VS Code", "Flutter (Zalo Mini App)"] },
 ];
