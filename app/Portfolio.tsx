@@ -151,19 +151,45 @@ export default function Portfolio({ lang }: { lang: Lang }) {
 }
 
 function LangSwitch({ current }: { current: Lang }) {
-  const item = (lang: Lang, href: string, label: string) =>
-    current === lang ? (
-      <span className="rounded px-2 py-0.5 font-mono text-xs font-semibold text-black bg-emerald-400">{label}</span>
-    ) : (
-      <a href={href} hrefLang={lang} className="rounded px-2 py-0.5 font-mono text-xs text-slate-300 hover:text-white">
-        {label}
-      </a>
-    );
+  const options: { lang: Lang; href: string; short: string; full: string }[] = [
+    { lang: "en", href: "/", short: "EN", full: "English" },
+    { lang: "vi", href: "/vi/", short: "VI", full: "Tiếng Việt" },
+  ];
 
   return (
-    <div className="flex items-center rounded-md border border-slate-700 p-0.5" aria-label="Language">
-      {item("en", "/", "EN")}
-      {item("vi", "/vi/", "VI")}
+    <div
+      role="group"
+      aria-label={current === "vi" ? "Chọn ngôn ngữ" : "Choose language"}
+      className="flex items-center gap-1 rounded-full border border-slate-700 bg-slate-900/80 p-1"
+    >
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="ml-1.5 mr-0.5 h-4 w-4 text-emerald-400" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+      </svg>
+      {options.map((o) =>
+        o.lang === current ? (
+          <span
+            key={o.lang}
+            aria-current="true"
+            className="rounded-full bg-emerald-400 px-3 py-1 text-xs font-semibold text-black"
+          >
+            <span className="sm:hidden">{o.short}</span>
+            <span className="hidden sm:inline">{o.full}</span>
+          </span>
+        ) : (
+          <a
+            key={o.lang}
+            href={o.href}
+            hrefLang={o.lang}
+            lang={o.lang}
+            title={o.full}
+            className="rounded-full px-3 py-1 text-xs font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white"
+          >
+            <span className="sm:hidden">{o.short}</span>
+            <span className="hidden sm:inline">{o.full}</span>
+          </a>
+        ),
+      )}
     </div>
   );
 }
