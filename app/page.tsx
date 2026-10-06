@@ -46,8 +46,8 @@ const projects = [
     img: "/projects/1-xaytoam.jpg",
     url: "https://xaytoam.vn/vat-lieu/",
     company: "Bizfly",
-    desc: "Building-materials marketplace with an Elasticsearch-powered product search: fast full-text search across the catalogue, combined with category filters, quote requests and a mobile-first layout.",
-    tags: ["Elasticsearch", "Search", "Responsive"],
+    desc: "Building-materials marketplace with an Elasticsearch product search that uses custom scoring logic to rank results by keyword relevance, so the best-matching materials show first. Also category filters, quote requests and a mobile-first layout.",
+    tags: ["Elasticsearch", "Custom scoring", "Search relevance"],
   },
 ];
 
