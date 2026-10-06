@@ -46,8 +46,8 @@ const projects = [
     img: "/projects/1-xaytoam.jpg",
     url: "https://xaytoam.vn/vat-lieu/",
     company: "Bizfly",
-    desc: "Building-materials marketplace with an Elasticsearch product search that uses custom scoring logic to rank results by keyword relevance, so the best-matching materials show first. Also category filters, quote requests and a mobile-first layout.",
-    tags: ["Elasticsearch", "Custom scoring", "Search relevance"],
+    desc: "Building-materials marketplace with product search on Elasticsearch function_score: weighted keyword matching across SKU, name, brand and category, accent-insensitive Vietnamese search, and custom business scoring (stock, best sellers, featured and new products) so the most relevant products rank first.",
+    tags: ["Elasticsearch", "function_score", "Search relevance"],
   },
 ];
 
